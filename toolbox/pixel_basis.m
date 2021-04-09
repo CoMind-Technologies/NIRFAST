@@ -47,7 +47,7 @@ if mesh.dimension == 2
          reshape(Y,nx*ny,1)];
     clear nx ny X Y
     % Find where new nodes fall
-    [index] = mytsearchn(mesh,...
+    [index, ~] = mytsearchn(mesh,...
                nodes(:,1:2));  
 
 elseif mesh.dimension == 3
@@ -70,7 +70,7 @@ elseif mesh.dimension == 3
          reshape(Y,nx*ny*nz,1) ...
          reshape(Z,nx*ny*nz,1)];
     clear nx ny nz X Y Z
-    [index] = mytsearchn(mesh,...
+    [index, ~] = mytsearchn(mesh,...
                nodes(:,1:3));
 end  
 
